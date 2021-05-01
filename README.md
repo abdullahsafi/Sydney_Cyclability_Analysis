@@ -1,6 +1,6 @@
 <p align="center">  
    <h1 align="center">🚴‍♂️ Sydney Cyclability Analysis 🚴‍♂️</h1>
-   <h5 align="center">DATA3406 ASSIGNMENT 2</h5>
+   <h5 align="center">DATA2001 PRACTICAL ASSIGNMENT</h5>
 </p>
 
 Aim :mag_right:
