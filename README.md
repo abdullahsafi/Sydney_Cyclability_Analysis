@@ -7,7 +7,8 @@ Aim :mag_right:
 ----------------
 To calculate a cyclability score for different neighbourhoods in Sydney. 
 
-**What is a Cyclability score?**
+What is a Cyclability score?
+----------------------------
 
 Its a score that we define to assess how well a neighbourhood caters to cyclists. 
 
@@ -22,14 +23,10 @@ Table of contents :clipboard:
 1. [Analysis Code](data_and_analysis/analysis.ipynb)
 2. [Final Report](Report.ipynb)
 3. [Raw Data](data_and_analysis)
-
-
-Overview of Schema
--------------------
-
-<p align="center">
-<img src="/imgs/schema.png" alt="schema.PNG" width="700"/>
-</p>
+4. [Getting Started](#getting-started-file_folder)
+5. [Data Origin and Summary](#data-origin-and-summary-floppy_disk)
+6. [Schema Overview](#schema)
+7. [Important Variables](#key-variables)
 
 
 Getting Started :file_folder:
@@ -55,6 +52,13 @@ Data Origin and Summary :floppy_disk:
 Several CSV files with Statistical Area 2 (SA2) data from the Australian Bureau of Statistics (ABS), as well as some car-sharing data from Sydney.
 
 populationdensitypopulation divided by neighbourhood’s land areaNeighbourhoods.csvdwellingdensitynumber of dwellings divided by neighbourhood land areaNeighbourhoods.csvservicebalancebalanceof selected business types in neighbourhoodBusinessStats.csvtransportdensitynumber of car-sharing pods per suburb divided by areaCarSharingPods.csv
+
+Schema
+-------------------
+
+<p align="center">
+<img src="/imgs/schema.png" alt="schema.PNG" width="700"/>
+</p>
 
 Key Variables
 ---------
