@@ -15,28 +15,21 @@ To calculate cyclability per neighbourhood, a formula was used that took all dat
 
 cyclability = z(population density)+ z(dwelling density)+ z(service balance)+ z(bikepod density)+ z(BikeParking)
 
-Where z is z-score or "standard score" which can be calculated using z = (x-μ)/σ
+Where z is z-score or "standard score" of a measure, which can be calculated using z(measure, x) = x − avg measure / stddev measure
 
 Table of contents :clipboard:
 ------------------
-1. [Analysis Code](data_and_sourcecode/analysis.ipynb)
+1. [Analysis Code](data_and_analysis/analysis.ipynb)
 2. [Final Report](Report.ipynb)
-3. [Raw Data](data_and_source_code)
+3. [Raw Data](data_and_analysis)
 
-Introduction
--------------
-Establishing if working in organised teams can significantly influence performance on peerwise will be beneficial to both teachers and students. Results have shown that academic improvement is especially pronounced within relatively small cohorts and can even boost student performance. In addition to this student performance and engagement is of great interest and importance to educators like Gareth Denyer, a Professor here at the University of Sydney.
 
-The Team:
----------
-| Names   | Role    |
-|---------|---------|
-| Abdullah| Manager |
-| Charlie | Tracker |
-| Tash    | Member  |
-| Yan     | Member  |
-| Johanna | Member  |
-| Taron   | Member  |
+Overview of Schema
+-------------------
+
+<p align="center">
+<img src="/imgs/schema.png" alt="schema.PNG" width="700"/>
+</p>
 
 
 Getting Started :file_folder:
@@ -45,13 +38,13 @@ Getting Started :file_folder:
 
 List of commands:
 
-- `$ git clone https://github.com/abdullahsafi/PeerWise_Group_Performance.git`
-- `$ cd PeerWise_Group_Performance`
-- Here you can access the Product Notebook and other folders.
-- The Product Notebook can be opened through Google Colab (recommened):
+- `$ git clone https://github.com/abdullahsafi/Sydney_Cyclability_Analysis.git`
+- `$ cd Sydney_Cyclability_Analysis`
+- Here you can access the Source Code and Report in Jupter Notebooks.
+- The Product Notebook can be opened through Google Colab:
    - Ensure you upload your copy of the repo onto your google drive
    - There is a path variable for you to link the data
-- The Product Notebook can be opened through Jupyter Notebooks:
+- The Product Notebook can be opened through Jupyter Notebooks (recommened):
    - Ensure that modules and dependancies are downloaded
 
 Data Origin and Summary :floppy_disk:
@@ -59,22 +52,9 @@ Data Origin and Summary :floppy_disk:
 
 **Origin of data**
 
-Gareth Denyer has made extensive use of PeerWise in large classes at Sydney University. He has a set of de-identified data for students who worked in groups which he has classified in terms of their motivation and achievement levels. The data available is from internal PeerWise logs and final exams. Gareth has agreed to be available to discuss this topic with groups taking it on. Students who want to do this project need to be linked to the ethics processes for analysing this data.
+Several CSV files with Statistical Area 2 (SA2) data from the Australian Bureau of Statistics (ABS), as well as some car-sharing data from Sydney.
 
-**Summary of files, tables, and fields.**
-
-| Data File | Description | 
-|--------------|----------------|
-|Comments data | Comment data including the author, the question it was posted on, the time it was posted, and the content of the comment |
-| Edits data | Data about edits to questions including the id of the old question, id of the new question, and the time the edit was made |
-| Ratings data | Data of ratings on questions including the question id, rater id, and the quality/difficulty score given |
-| Tags data | Data of the tags on questions including the tag, question id, and tag id |
-| Courses data | Data of each course including the course name, course id, and relevant start/due dates for the cycles |
-| Questions data | Data about questions posted by students |
-| Courses data | Data of each course including the course name, course id, and relevant start/due dates for the cycles |
-
-
-
+populationdensitypopulation divided by neighbourhood’s land areaNeighbourhoods.csvdwellingdensitynumber of dwellings divided by neighbourhood land areaNeighbourhoods.csvservicebalancebalanceof selected business types in neighbourhoodBusinessStats.csvtransportdensitynumber of car-sharing pods per suburb divided by areaCarSharingPods.csv
 
 Key Variables
 ---------
@@ -82,11 +62,7 @@ Key Variables
 
 | Key Variables | Description | 
 |--------------|----------------|
-| User           | Used to uniquely identify a user of the PeerWise platform (anonomous) |
-| Team           | The team that a user is assigned to. Can be used to evaluate size of teams and investigate team performance |
-| QuestionID     | Used to uniquely identify a student published question |
-| Comment_ID     | Used to uniquely identify a student published comment  |
-| Timestamp      | The time an event occured (such as posting a comment, position a question, answering a question) |
-| avg_rating     | The average student-given rating of a student-published question          |
-| AcademicMark   | A mark assigned by academic staff to a student's question based on its quality |
-| Answer         | The correct answer of a question    |
+| populationdensity          | population divided by neighbourhood’s land area |
+| dwellingdensity           | number of dwellings divided by neighbourhood land area|
+| servicebalance     | balance of selected business types in neighbourhood |
+| transportdensity     | number of car-sharing pods per suburb divided by area |
